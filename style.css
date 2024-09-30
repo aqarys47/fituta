@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background-color: rgb(251, 250, 250);
+    z-index: 1000;
+}
+
+
+.title h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 20px;
+    font-weight: 200;
+}
+
+.first, .second, .third, .forth {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.first img, .second img, .third img, .forth img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.first h1, .second h2, .third h3 {
+    position: absolute;
+    color: white;
+    z-index: 10;
+}
+
+.first h1 {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    text-align: right;
+}
+
+.second h2 {
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    font-size: 40px;
+}
+
+.third h3 {
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    font-size: 35px;
+}
+
+
+.first button, .second button, .third button {
+    position: absolute;
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+
+.first button:hover, .second button:hover, .third button:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+
+.first button {
+    top: 65%;
+    right: 10%;
+    width: 250px;
+}
+
+
+.second button {
+    top: 65%;
+    left: 10%;
+    width: 250px;
+}
+
+
+.third button {
+    top: 65%;
+    left: 10%;
+    width: 250px;
+}
+
+
+.third img {
+    object-fit: cover;
+}
+
+
+#main-footer {
+    background-color: #171717;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 220px;
+    margin: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ff4081;
+}
+
+.footer-section a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ff4081;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #444;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p a {
+    color: #ff4081;
+    text-decoration: none;
+}
+
+
+@media (max-width: 1200px) {
+    header {
+        padding: 15px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    .title h1 {
+        font-size: 20px;
+        letter-spacing: 10px;
+    }
+
+
+    .first h1, .second h2, .third h3 {
+        font-size: 30px;
+    }
+
+
+    .first button, .second button, .third button {
+        width: 200px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title h1 {
+        font-size: 18px;
+        letter-spacing: 5px;
+    }
+
+    .first h1, .second h2, .third h3 {
+        font-size: 24px;
+        text-align: center;
+        right: 0;
+        left: 0;
+    }
+
+
+    .first button, .second button, .third button {
+        width: 180px;
+        padding: 8px 15px;
+        top: 75%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
